@@ -1,0 +1,30 @@
+.container{
+    
+    border: 1px solid black;
+    margin: 20px;
+}
+
+.border{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4, 60px);
+    border: none;
+    grid-gap: 20px;
+    
+
+}
+
+.red{
+    background-color: rgb(201, 107, 107);
+    border: none;
+}
+
+.blue{
+    background-color: rgb(102, 146, 212);
+    border: none;
+}
+
+.yellow{
+    background-color: rgb(196, 171, 89);
+    grid-column: 1 /span 2;
+}
