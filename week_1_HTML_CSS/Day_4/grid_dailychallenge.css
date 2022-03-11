@@ -1,0 +1,48 @@
+.container{
+   
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+ 
+ 
+}
+
+.cell{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: yellow;
+    
+}
+
+.column-1 {
+    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  
+
+}
+
+
+.column-2 {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+  
+  }
+ 
+.column-3 {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+    
+  
+  }
