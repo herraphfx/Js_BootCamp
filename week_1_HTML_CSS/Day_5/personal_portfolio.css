@@ -1,0 +1,51 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+    height: 80vh;
+   
+    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+body{
+    margin: 0 auto;
+   } 
+
+.cell{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.header{
+ background-color: aqua;
+ border: 1px solid black;
+width: 100%;
+height: 200px;
+}
+
+.header-2{
+    background-color: antiquewhite;
+
+}
+.contact-info{
+    background-color: aquamarine;
+    display: grid;
+    
+    
+}
+.profile{
+    background-color: blueviolet;
+    margin-left: 20px;
+
+}
+.education{
+    background-color: cornflowerblue;
+}
+.work{
+    background-color: darkgreen;
+    margin-left: 20px;
+}

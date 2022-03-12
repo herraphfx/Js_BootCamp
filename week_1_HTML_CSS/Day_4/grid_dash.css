@@ -1,0 +1,32 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-gap: 10px;
+    background-color: antiquewhite;
+    width: 500px;
+}
+
+
+
+
+
+
+.cell{
+    border: 2px solid black;
+    width: 20px;
+    height: 20px;
+}
+.item-1{
+    background-color: rgb(255, 81, 0) ;
+   
+}
+
+.item-2{
+    background-color: rgb(248, 196, 100);
+   
+}
+
+.item-3{
+    background-color: rgb(153, 47, 47);
+   
+}
