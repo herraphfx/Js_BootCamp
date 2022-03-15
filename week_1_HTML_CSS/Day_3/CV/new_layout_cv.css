@@ -137,6 +137,15 @@ a{
    line-height: 50px;
     
 }
+.main-content .box-wrapper .inner-content .section_contact ul{
+    font-size: 30px;
+    list-style-type: none;
+    padding: 30px;
+    line-height: 50px;
+    text-align: left;
+   
+     
+ }
 
 
 
@@ -181,12 +190,26 @@ a{
 }
 
 
+hr{
+    border: 5px solid green;
+    border-radius: 5px;
+    width: 30px;
+    margin-left: 70px;
+}
 
 
 
-
-.main-content .box-wrapper .inner-content p span{
+.main-content .box-wrapper .inner-content span{
     color: darkblue;
+    letter-spacing: 7px;
+}
+
+.main-content .box-wrapper .inner-content .skills{
+    color: darkblue;
+    letter-spacing: 10px;
+    padding-left: 70px;
+    padding-top: 70px;
+    font-size: 20px;
 }
 
 #skills .inner-content span{
@@ -235,6 +258,92 @@ width: 70px;
         border-radius: 50%;
         width: 100px;
         height: 100px;
+    }
+}
+
+
+/* About Me */
+
+.progress{
+    background-color: rgb(223, 219, 219);
+    justify-content: flex-start;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 100%;
+    margin: 20px;
+
+}
+
+.pro-value1{
+    animation: load1 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 50px;
+    width: 0;
+}
+
+.pro-value2{
+    animation: load2 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 50px;
+    width: 0;
+}
+
+.pro-value3{
+    animation: load3 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 50px;
+    width: 0;
+}
+
+.pro-value4{
+    animation: load4 3s normal forwards;
+    border-radius: 50px;
+    background-color: black;
+    height: 50px;
+    width: 0;
+}
+.progress p{
+    color: white;
+    padding: 15px;
+}
+
+@keyframes load1{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 95%;
+    }
+}
+
+@keyframes load2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 88%;
+    }
+}
+@keyframes load3{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 68%;
+    }
+}
+@keyframes load4{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 78%;
     }
 }
 
