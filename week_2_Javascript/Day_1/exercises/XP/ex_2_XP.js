@@ -18,5 +18,11 @@ console.log(watchedSeries);
 watchedSeries.unshift("Legends");
 console.log(watchedSeries);
 
-delete watchedSeries[1];
+deleting = watchedSeries.indexOf("black mirror");
+console.log(deleting);
+
+delete watchedSeries[deleting];
 console.log(watchedSeries);
+
+
+

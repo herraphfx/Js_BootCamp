@@ -137,6 +137,21 @@ arr_example.unshift(5);
 console.log(arr_example);
 
 
+//Nested array
+
+
+let students_array = [ 
+   ["Oliver", 25] , 
+   [ "Dheeksha", 20], 
+    ["Henry", 29, "Beau Bassin", ['Rafael', 'Liliane']], 
+    ["Wayne", 18], 
+    ["Julie", 19], 
+    ["Bashir", 35]
+];
+
+henry_brother = students_array[2][3][0];
+console.log(henry_brother);
+
 
 
 

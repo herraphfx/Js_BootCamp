@@ -1,10 +1,10 @@
-//Exercise 1
+            //Exercise 1
 
-let favoriteFood = 'Briyani';
-let favoriteMeal = 'Dinner';
+            let favoriteFood = 'Rice';
+            let favoriteMeal = 'Dinner';
 
-meal = "I eat "+ favoriteFood + " at every " + favoriteMeal;
-console.log(meal);
+            meal = "I eat "+ favoriteFood + " at every " + favoriteMeal;
+            console.log(meal);
 
 
 
