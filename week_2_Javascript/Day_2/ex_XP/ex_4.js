@@ -1,4 +1,4 @@
-let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
+let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000", "henry"];
 
 if(users.length == 0){
     console.log("No one is online");
