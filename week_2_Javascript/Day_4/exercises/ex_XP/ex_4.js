@@ -16,13 +16,21 @@ let prices = {
 
 shoppingList = ['banana', 'orange', 'apple'];
 
+
+
 function myBill(){
-    for(let stocks in stock){
-        if(stock[stocks] >= 1){
-            console.log(prices);
-        }
+    let total = 0;
+    for(let stocks of shoppingList){
+        if(stock[stocks] > 0){
+            total += prices[stocks];
+            console.log("1 X " + stocks + " at $" +prices[stocks]);
+            stock[stocks]--;          //Decrease item by 1
+                }
+       
+       
     }
-   
+    return total;
 }
 
-myBill();
+let bill = myBill();
+console.log(bill);

@@ -7,7 +7,7 @@
 // let bill =null;
 // for(let idx in arr) {
 //     let character = Number(arr[idx]);
-//     if(!NaN(character) && character != ""){
+//     if(!NaN(character) && character != " "){
 //         console.log(arr[idx]);
 //         bill = Number(arr.slice(idx));
 //         break;
@@ -15,43 +15,41 @@
 // }
 
 
-
-
-
-function calculateTip(){
-
-    amount_bill = prompt("John, enter the amount ");
+amount_bill = prompt("John, enter the amount ");
     new_amount_bill = Number(amount_bill);
-    console.log(new_amount_bill);
- 
-    if(new_amount_bill < 50){
-        tip = new_amount_bill * 0.2;
-        console.log('I will tip ' +'$'+tip);
+function calculateTip(bill){
+    let tip = 0;
+    if(bill < 50){
+        tip = bill * 0.2;
     }
-
-    else if(new_amount_bill >= 50 || new_amount_bill < 200){
-         tip1 = new_amount_bill * 0.15;
-         console.log('I will tip ' +'$'+tip1);
+    else if(bill >= 50 && bill <= 200){
+        tip = bill * 0.15;
     }
-
-    else if(new_amount_bill >= 200){
-     tip2 = new_amount_bill * 0.15;
-     console.log('I will tip '+'$'+tip2);
+    else if(bill > 200){
+        tip = bill * 0.1;
     }
+    console.log(tip);
 }
+calculateTip(new_amount_bill);
 
 
-//    function calculateTip_1(){
-//     amount_bill = prompt("John, enter the amount ");
-//     new_amount_bill = Number(amount_bill);
-//     if(new_amount_bill > 200){
-//         tip = new_amount_bill * 0.1;
-//         console.log('I will tip '+ tip);
- 
+
+
+
+
+// function calculateTip(cost) {
+//     if (cost < 50) {
+//         console.log(cost * 0.2) ;
 //     }
-//    }
-//    calculateTip_1();
+//     if (cost <= 200) {
+//         console.log(cost * 0.15) ;
+//     }
+//     else{
+//         console.log(cost * 0.1);
+//     }
+    
+// }
 
+// console.log("Amount paid is " + new_amount_bill);
+// calculateTip(new_amount_bill);
 
-
-calculateTip();
