@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.profiles{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
+    
+    width: 300px;
+    text-align: center;  
+}
