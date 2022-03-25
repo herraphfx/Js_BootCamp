@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+    <style>
+        #outer{
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+
+        }
+        #inner{
+            background-color: greenyellow;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <button type="submit" onclick="set_timeout()">Set TImeOut</button>
+
+    <button type="submit" onclick="clear_timeout()">Clear TImeOut</button>
+
+    <button type="submit" onclick="set_interval()">Set Intervals</button>
+
+    <button type="submit" onclick="move_it()">Move! Please :$</button>
+
+    <button type="submit" onclick="clear_interval()">Clear Intervals</button>
+
+<div id="main">
+    <div id="outer">
+        <div id="inner">
+            
+        </div>
+    </div>
+</div>
+
+    <script src="DOM_animation.js"></script>
+</body>
+</html>

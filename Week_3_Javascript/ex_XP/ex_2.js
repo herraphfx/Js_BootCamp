@@ -36,7 +36,7 @@ console.log(final_hey2);
 let secondLI = document.getElementsByTagName('ul');
 newLI = secondLI[1].children[1];
 newLI.remove();
-    []
+
 //add class name student_list to both ul
 
 
