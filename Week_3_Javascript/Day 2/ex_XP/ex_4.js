@@ -8,13 +8,13 @@ submit_form.addEventListener('submit', (ev) =>{
 function compute(){
     let radius = document.getElementById('radius').value;
 
-    let volume = document.getElementById('volume').value;
-
-
     let volumecal = (((4/3)*3.142* (radius * radius *  radius)));
     console.log(volumecal);
 
+    
 
+    submit_form.elements['volume'].setAttribute('value', `${volumecal}`);
+    
 }
 
 compute();
