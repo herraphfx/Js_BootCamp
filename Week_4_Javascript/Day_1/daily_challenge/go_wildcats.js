@@ -33,7 +33,7 @@ const gameInfo = [
    });
 
    let result = [];
-   gameInfo.forEach((elem)=> elem.score > 5 ? result.push(elem) : console.log('hi') );
+   gameInfo.forEach((elem)=> elem.score > 5 ? result.push(elem) : console.log('Go WildCat.') );
     console.log(result);
 
     let scores = 0;
@@ -41,3 +41,4 @@ const gameInfo = [
         scores = scores + (e.score)
     })
 
+  
