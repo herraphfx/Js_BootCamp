@@ -1,17 +1,8 @@
-let colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
-let ordinal = ['st', 'nd', 'rd', 'th', 'th','th','th'];
+checkS = [prompt('Type something')];
 
-
-
-colors.forEach((value, index)=>{
-    // let newest = Number(index)+1;
-    // console.log( newest + ordinal[index]+ " is "+ colors[index]);
+checkS.forEach(element => {
+   typeof element =='string' ?
+       console.log(true) :   console.log(false);
    
-
-    console.log(`${index+1}${ordinal[index]} is ${colors[index]}`);
-
-
 });
-
-
-        
+console.log(checkS);

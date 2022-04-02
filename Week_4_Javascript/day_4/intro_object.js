@@ -60,7 +60,59 @@ const address = {
 
   //Nested Object Destructuting
 
-  
+  const student = {
+    name: 'John Doe',
+    age: 16,
+    scores: {
+        maths: 74,
+        english: 63
+    }
+};
+
+const {name, score: maths } = student;
+
+console.log(`${name} has scored ${maths} in exams`);
+
+function displaySummary(student_obj){
+    console.log(`Hello, ${student_obj.name}`);
+}
+
+displaySummary(student);
+
+//Without destructuring 
+function displaySummary(student) {
+    console.log('Hello, ' + student.name);
+    console.log('Your Maths score is ' + (student.scores.maths || 0));
+    console.log('Your English score is ' + (student.scores.english || 0));
+    console.log('Your Science score is ' + (student.scores.science || 0));
+}
+
+//with destructing
+
+function displaySummary2({name, scores: {maths = 0, english =0, science =0}}) {
+    console.log('Hello, ' + name);
+    console.log('Your Maths score is ' + maths);
+    console.log('Your English score is ' + english);
+    console.log('Your Science score is ' + science);
+}
+
+displaySummary2(student);
+
+//Convert string to object
+let str = 'abcdefgh';
+
+let obj4 = {...str}
+
+console.log(obj4);
+
+//convert array to object
+let arr = ['a','b','c','d','e','f','g','h'];
+let obj5 = {...arr}
+console.log(obj5); 
+
+
+
+
 
 
 

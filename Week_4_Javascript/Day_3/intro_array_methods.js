@@ -73,7 +73,7 @@ function filter(arr, test){
 console.log(filter(arr_num, above2));
 
 //Filter method 
-let arr_filter = arr_num.filter((value ) => value * 2 );
+let arr_filter = arr_num.filter((value) => value * 2 );
 console.log(arr_filter);
 
 //Reduce  Method Process
@@ -84,6 +84,8 @@ function reduce(arr, combine, start){
     }
     return current;
 }
+
+
 
 function sum(num1, num2){
     return num1 + num2;
@@ -133,6 +135,8 @@ console.log(rest);
 
 const iterable = [a , b, ...rest];
 console.log(iterable);
+
+
 
 //Error Handling try-catch
 try{

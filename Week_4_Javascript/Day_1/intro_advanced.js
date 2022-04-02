@@ -47,6 +47,30 @@ let arr = ["blue", ["red", "yellow"], "green", [4, 5, 6]];
 let flattened = arr.flat();
 console.log(flattened);
 
+//Callback function in parameter
+
+function greet(name, Callback){
+  console.log('Hi' + ' '+ name);
+  Callback();
+}
+
+function callMe(){
+  console.log('I am the function');
+}
+
+greet('Henry', callMe);
+
+//callback function 
+function greet(name, myFunction){
+  console.log('Hello World');
+  myFunction(name);
+}
+
+function sayName(name){
+  console.log('Hello' + ' ' + name);
+}
+setTimeout(greet, 2000,'John', sayName);
+
 
 
   
