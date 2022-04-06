@@ -38,3 +38,26 @@ let current_date = new Date();
 console.log(current_date);
 console.log(current_date.toJSON());
 console.log(JSON.stringify(current_date));
+
+
+//Try Catch
+
+console.log("Before Henry");
+
+try{
+    console.log(Henry);
+}
+catch(e){
+    console.log(e.name);
+    if(e.name === 'Reference Error'){
+        console.log('Reference Error detected');
+    }
+    else if(e.name === 'TypeError'){
+        console.log('Wrong Type Received');
+    }
+    
+}
+finally{
+console.log("This line will always run");
+}
+console.log("After Henry")
