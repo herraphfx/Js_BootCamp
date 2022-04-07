@@ -34,7 +34,8 @@ xhr.onprogress = function(event){
     }
 };
 
-//
+
+//Handle all errors received
 xhr.onerror = function(){
     console.log('Request failed');
 }

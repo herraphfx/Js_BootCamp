@@ -21,7 +21,7 @@ console.log(xhr.readyState); //1
 
 xhr.setRequestHeader('Content-Type', 'application/json');
 
-xhr.responseType = 'document';
+
 
 //send request
 xhr.send();
