@@ -16,7 +16,7 @@ xhr.setRequestHeader('Content-Type', 'application/json');
 //Response data in json
 xhr.responseType = 'json';
 
-
+//send
 xhr.send();
 
 let data = [];
