@@ -25,6 +25,9 @@ function make_request(){
             data = chuck.response;
             console.log(data);
             appendData(data);
+
+
+         
         }
     }
 
@@ -39,34 +42,6 @@ function make_request(){
       }
 }
 
-// function getHomeworld(){
-//     let chuck = new XMLHttpRequest();
-//     let homeurl = chuck.response.homeWorld
-//     chuck.open('GET', `https://swapi.dev/api/people/${random}`);
-//     chuck.responseType = 'json';
-//     chuck.send();
-    
-    
-//     let data = [];
-//     chuck.onload = function(){
-//         if(chuck.status === 200){
-//             console.log(chuck.response);
-//             data = chuck.response;
-//             console.log(data);
-            
-//         }
-//     }
-
-//     chuck.onerror = function(){
-//         alert("Request failed!");
-//       }
-
-//       chuck.onprogress = function(){
-//         let progress = document.getElementById('progress');
-       
-//       }
-// }
-
 
 
 function appendData(data){
@@ -75,9 +50,32 @@ function appendData(data){
     let genderdiv =document.getElementById('genderdiv');
     let birthdiv = document.getElementById('birthdiv');
     let homediv = document.getElementById('homediv');
-    
+    let home_url = data.homeworld;
 
-   
+    function get_homeworld()
+    {
+        let chuck = new XMLHttpRequest();
+        
+        chuck.open('GET', home_url, true);
+        chuck.responseType = 'json';
+        chuck.send();
+
+        chuck.onload = function () {
+            if (chuck.status === 200) {
+                console.log(chuck.response);
+                homediv.innerText = 'Home World: ' + chuck.response.name;
+                console.log(homediv);
+                
+            } else {
+                console.log(`Error ${chuck.status}`);
+            }
+        }
+
+        chuck.onerror = function () {
+            alert('An unexpected error occurred.')
+        }
+    }
+    get_homeworld();
 
     namediv.innerText = data.name; 
 
@@ -86,9 +84,6 @@ function appendData(data){
     genderdiv.innerText = 'Gender: ' + data.gender;
     
     birthdiv.innerText = 'Birth: ' + data.birth_year;
-    
-    homediv.innerText = 'Home: ' + data.homeworld;
-    
 
 }
 
