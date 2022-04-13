@@ -1,3 +1,4 @@
-insert into actors_2(firstname, lastname, age, oscars)
-values('Henry', 'Oko', '1992/4/4', '3')
+-- select * from actors_2
+
+select count(*) from actors_2
 

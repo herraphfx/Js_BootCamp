@@ -1,0 +1,3 @@
+-- select * from customers order by firstname asc limit 3
+
+-- select lastname from customers order by lastname desc
