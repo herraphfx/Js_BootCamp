@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mini_project.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="form">
+        <form class="form_container" onsubmit="getSend()" name="form">
+            <input type="text" id="name" value="" placeholder="Enter Name" name="name">
+            <input type="text"  id="description" placeholder="Description" value="" name="description">
+            <input type="datetime-local" placeholder="start_date_time" id="start_time" name="start_time">
+            <input type="datetime-local" placeholder="end_date_time" id="end_time" name="end_time">
+            <input type="submit" value="Add to List">
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="schedule_container">
+            <div class="days_container">
+                <span class="corner"> </span>
+                    <div class="day">sun</div>
+                    <div class="day">mon</div>
+                    <div class="day">tue</div>
+                    <div class="day">wed</div>
+                    <div class="day">thu</div>
+                    <div class="day">fri</div>
+                    <div class="day">sat</div>
+                  
+               
+            </div>
+            <div class="days_container">
+                <span class="corner_1"> </span>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                    <div class="day" id="week_1"></div>
+                  
+               
+            </div>
+            <div class="days_container">
+                <span class="corner_1"> </span>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                  
+               
+            </div>
+            <div class="days_container">
+                <span class="corner_1"> </span>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                    <div class="day"></div>
+                  
+               
+            </div>
+        </div>
+    </div>
+    <script src="mini_project.js"></script>
+</body>
+</html>

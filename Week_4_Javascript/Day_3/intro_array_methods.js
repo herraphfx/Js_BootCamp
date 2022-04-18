@@ -184,6 +184,7 @@ let studentNEw = students.map((element, index, array) => {
         name: element.name,
         score: element.score, 
         newscore: newScore
+        
     }
 })
 
@@ -197,3 +198,11 @@ let evenNumbers = numbers.filter((element, index, array) => {
 })
 
 console.log(evenNumbers);
+
+
+// Reduce
+
+const arr = [1, 4, 9, 16]
+let sum = arr.reduce((acc, val)=> {
+    console.log()
+})
