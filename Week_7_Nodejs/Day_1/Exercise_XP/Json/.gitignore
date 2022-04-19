@@ -1,0 +1,3 @@
+#Removes large files you dont want added to git hub
+
+node_modules/
