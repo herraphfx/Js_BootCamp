@@ -5,10 +5,7 @@ const reducer = (state, action) => {
 
    
     //action.day is the payload from the actions folder
-    let currentDay = week.indexOf(action.day)
-
-    //set this variable for later
-    let chosenDay;
+  
 
     switch (action.type) {
 

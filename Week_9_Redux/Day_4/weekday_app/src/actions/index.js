@@ -7,6 +7,18 @@ const forward = weekday => {
     }
 }
 
+//async code
+//dispatch the action once after 3 seconds
+const forwardAsync = (day) =>{
+    return dispatch => {
+        setTimeout(()=>{
+            console.log('seTimeOut');
+            //dispatch the forward action creator
+            dispatch(forward(day))
+        }, 3000)
+    };
+}
+
 //to go back to the previous day
 const backward = weekday => {
     console.log("IN ACTION - backward")
@@ -18,6 +30,6 @@ const backward = weekday => {
 
 //we export the two functions
 export {
-    forward,
+    forwardAsync,
     backward,
 }

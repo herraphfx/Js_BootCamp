@@ -1,9 +1,10 @@
 import React from "react";
 import './Day.css';
-import { store } from "./store";
+// import { store } from "./store";
 import { forward, backward } from "./actions";
+import { connect } from "react-redux";
 
-const Day = ({ weekday }) => {
+const Day = (props) => {
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -14,10 +15,12 @@ const Day = ({ weekday }) => {
 
         switch (buttonType) {
             case "next":
-                store.dispatch(forward(day));
+                // store.dispatch(forward(day));
+                props.next(day);
                 break;
             case "back":
-                store.dispatch(backward(day));
+                // store.dispatch(backward(day));
+                props.back(day);
                 break;
             default:
                 console.log("wrong button")
@@ -27,11 +30,16 @@ const Day = ({ weekday }) => {
 
     return (
         <>
-            <h1 data-day={weekday}>Today is <span>{weekday}</span></h1>
+            <h1 data-day={props.weekday}>Today is <span>{props.weekday}</span></h1>
             <button type="submit" onClick={handleSubmit} data-button="next">Next Day</button>
             <button type="submit" onClick={handleSubmit} data-button="back">Previous Day</button>
         </>
     );
 };
 
-export default Day;
+const mapStateToProps = (state) => {
+    // const { working } = ownProps;
+    return {weekday: state.weekday };
+  };
+  
+  export default connect(mapStateToProps)(Day);

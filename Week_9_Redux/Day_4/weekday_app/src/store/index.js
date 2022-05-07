@@ -1,7 +1,8 @@
 // we import the createStore factory function from Redux. 
 import { createStore, applyMiddleware } from "redux";
-import { reducer } from "../reducers";
-import { first } from '../middlewares'
+import { reducer } from "./reducers";
+import { first } from './middlewares'
+import thunk from 'redux-thunk';
 
 
 const middlewareEnhancer = applyMiddleware(first)
