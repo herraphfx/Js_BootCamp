@@ -11,7 +11,8 @@ console.log(xhr.readyState); //0
 
 // xhr.open(method, URL, [async, user, password])
 
-let url = 'http://time.jsontest.com';
+// let url = 'http://time.jsontest.com';
+let url = 'http://dataservice.accuweather.com/locations/v1/countries/'
 
 xhr.open('GET', url, true);
 
