@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "ejs": "^3.1.7",
     "express": "^4.18.1",
+    "node-fetch": "^3.2.4",
     "nodejs": "^0.0.0"
   },
   "name": "week_10_project",
@@ -12,5 +15,6 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }
