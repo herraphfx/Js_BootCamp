@@ -44,17 +44,73 @@
 
     <div class="cardContainer">
       <div class="below">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
+      
+     
       </div>
     </div>
    
+    <script type="text/javascript">
+      let url = "http://api.openweathermap.org/data/2.5/forecast?lat=32.109333&lon=34.855499&appid=bf8bdc6ff3f8af3bd4bad0fa482bfc3c";
+
+      fetch(url)
+      .then(function(response){
+          console.log(response.json());
+      }
+      )
+      .catch(function(response){
+          console.log('An Error occured');
+          console.log(response);
+      })
+
+      const get_city = async () =>{
+          let city = await fetch(url);
+          let data = await city.json();
+         
+          return data
+         
+        }
+      
+     
+      
+      get_city().then((data)=>{
+         for (let i =0; i< data.list.length; i++){
+           
+         
+       
+       let outerContainer = document.getElementsByClassName('below')[0];
+        let cardContainer = document.createElement('div');
+        cardContainer.className = "card";
+
+        outerContainer.append(cardContainer);
+
+        let cardBody = document.createElement('div');
+        cardBody.className = "card-body";
+
+        cardContainer.append(cardBody);
+      
+        
+        let cardTitle = document.createElement('h5');
+        cardTitle.className = "card-title";
+        cardTitle.innerText = data.city.name;
+
+        cardBody.append(cardTitle);
+
+        let cardText = document.createElement('p');
+        cardText.className = "card-text";
+        cardText.innerText = data.list[i].main.temp;
+        
+        cardBody.append(cardText);
+
+        let cardText2 = document.createElement('p');
+        cardText2.className = "card-text2";
+        cardText2.innerText = data.list[i].weather[0].description;
+
+        cardBody.append(cardText2);
+      }
+      
+      })
+
+    </script>
   
 
     <script src="server.js"> </script>

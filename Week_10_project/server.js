@@ -25,10 +25,12 @@ const get_city = async () =>{
     return data
 }
 
+
 app.get('/', function(req, res){
     get_city().then((data)=>{
-       res.render('index', {title: 'Weather App', weatherData: data});
+        res.render('index', {weatherData: data});
     })
+   
    
 })
 

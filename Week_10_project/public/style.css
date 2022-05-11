@@ -42,3 +42,13 @@
 .cityName {
     margin-top: 25px;
 }
+.cardContainer{
+    display: flex;
+    
+}
+
+.below{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
