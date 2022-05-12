@@ -5,7 +5,13 @@
             <div class="title pb-5">
                 <h2 class="font-weight-bold">Login System</h2>
                 <span>Ceci est une page de connexion d'administrateur</span>
+                <% if(locals.logout){%>
+                    <div class="alter alter-success text-center">
+                        <%=logout%>
+                    </div>
+                <% } %>
             </div>
+
            <form action="/route/admin/login" method="POST" class="pt-3">
                <div class="form-group pb-3">
                    <input type="email" class="form-control" placeholder="Entrer votre LoginID" name="email">

@@ -29,9 +29,9 @@ app.set('view engine', 'ejs');  //ejs is a dynamic engine for dynamic pages
 app.use('/route', router);
 
 //Admin route
-app.get('/admin', function(req, res){
+app.get('/administrator', function(req, res){
     res.render('base', {title: 'Login System'});
     console.log('Listening to the server on http://localhost:5000/admin')
 })
 
-app.listen(5000)
+app.listen(5005)
