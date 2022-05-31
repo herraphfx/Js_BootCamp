@@ -1,7 +1,8 @@
 
 
 fetch('http://localhost:3000')
-.then(res => res.json().then((data) =>{
+.then(res => res.json()
+.then((data) =>{
   console.log('obj: ', data);
   let body = document.body;
   let p = document.createElement('p');
