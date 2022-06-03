@@ -313,12 +313,262 @@ function isEven(num){
 // let total = 0;
 // let average = 0;
 
-for (let row =0; row< grades.length; row++){
-    for(let col = 0; col< grades[row].length; col++){
-        total += grades[row][col];
+// for (let row =0; row< grades.length; row++){
+//     for(let col = 0; col< grades[row].length; col++){
+//         total += grades[row][col];
+//     }
+//     average = total / grades[row].length;
+//     console.log("Student " + parseInt(row+1) + "average: " + average.toFixed(2));
+// }
+
+// let grades = [[89,77], [76,82,81], [91,94,89, 99]];
+
+// let total = 0;
+// let average = 0.0;
+// for(let row = 0; row < grades.length;  row++){
+//     for ( let col =0; col < grades[row].length; col++){
+//         total += grades[row][col]
+//     }
+//     average = total / grades[row].length;
+//     console.log(average);
+// }
+
+// function Point(x,y){
+//     this.x = x;
+//     this.y = y;
+// }
+
+// function displayPts(arr){
+//   for(let i=0; i < arr.length; i++){
+//       console.log(arr[i].x + "," + arr[i].y);
+//   }
+// }
+
+// let p1 = new Point(1,2);
+// let p2 = new Point(3,5);
+// let p3 = new Point(2,8);
+// let p4 = new Point(4,3);
+
+// let points = [p1, p2, p3 ,p4];
+
+// for(let i = 0; i < points.length; i++){
+//     console.log("Point" + parseInt(i+1) + ": " + points[i].x + points[i].y );
+// }
+
+// let p5 = new Point(12, 3);
+// points.push(p5);
+// console.log('After push');
+// displayPts(points);
+
+// function weekTemps(){
+//     this.dataStore = [];
+//     this.add = add;
+//     this.average = average;
+// }
+
+// function add(temp){
+//     this.dataStore.push(temp);
+// }
+
+// function average(){
+//     let total = 0;
+//     for(let i =0; i < this.dataStore.length; i++){
+//         total += this.dataStore[i] /2;
+//     }
+//     return total / this.dataStore.length;
+// }
+// let thisWeek = new weekTemps();
+// thisWeek.add(50);
+
+// console.log(thisWeek.average());
+
+// function List() {
+//     this.listSize = 0;
+//     this.pos = 0;
+//     this.dataStore = []; // initializes an empty array to store list elements
+//     this.clear = clear;
+//     this.find = find;
+// }
+
+// function append(element){
+//     this.dataStore[this.listSize++] = element
+   
+// }
+
+// function find(element){
+//     for(let i =0; i< this.dataStore.length; i++){
+//         if(this.dataStore[i] == element){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// function remove(element){
+//     let foundAt = this.find(element);
+//     if(foundAt > -1 ){
+//         this.dataStore.splice(foundAt, 1);
+//         --this.listSize
+//     }
+// }
+
+// function toString(){
+//     return this.dataStore;
+// }
+
+// const array1 = [1,2,3,4,5];
+
+
+// const sumWithInitial = array1.reduce(
+//     (sum1, sum2) => sum1 + sum2
+// )
+
+// console.log(sumWithInitial);
+
+// const array = [15, 16, 17,18, 19];
+
+// function reducer(previous, current, index, array){
+//     const returns = previous + current;
+//     console.log(`previous: ${previous}, current: ${current}, index: ${index}, returns: ${returns}`);
+//     return returns;
+// }
+
+// array.reduce(reducer);
+
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+// const interview = ["Interview"]
+
+// console.log(interview.slice(0, 5))
+
+// console.log(interview.slice(5))
+
+
+// const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// const result = words.filter(
+//     word => word.indexOf('limit')
+// )
+
+// const found = words.find(element => element == 'elite')
+
+// console.log(result);
+
+// console.log(found);
+
+// const inventory = [
+//     {name: 'apples', quantity: 2},
+//     {name: 'bananas', quantity: 0},
+//     {name: 'cherries', quantity: 5}
+//   ];
+
+//   function isCherries(fruit){
+//       return fruit.name === 'cherries';
+//   }
+
+//   console.log(inventory.find(isCherries));
+
+const countries = ['Finland', 'Estonia', 'Sweden', 'Norway'];
+
+// const newCountries = [];
+
+// countries.forEach((country) => newCountries.push(country));
+
+// console.log(newCountries);
+
+// countries.forEach((country, i, arr) => console.log(i, country, arr));
+
+// const numbers = [1,2,3,4,5]
+
+// let sum = 0;
+// numbers.forEach((add) => (sum+= add))
+// console.log(sum);
+
+// const newCountries = countries.map((country) =>  country.length)
+
+// console.log(newCountries);
+
+// const numbers = [1, 2, 3, 4, 5];
+
+// const squares = numbers.map((n) => n**2)
+
+// console.log(squares);
+
+// const countrieswithLand = countries.filter((country) => country.includes('land'));
+
+// console.log(countrieswithLand);
+
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const even = numbers.filter((n) => n % 2 ==0)
+// const odd = numbers.filter((n) => n % 2 !== 0)
+
+// console.log(even);
+// console.log(odd);
+
+// const sum = numbers.reduce((acc, cur) => acc + cur, 5);
+
+// console.log(sum);
+
+// const strs = ['Hello', 'World', '!']
+
+// const helloWorld = strs.reduce((acc, cur) => acc + ' ' + cur);
+
+// console.log(helloWorld);
+
+// const value = numbers.reduce((acc, cur) => acc * cur);
+
+// console.log(value);
+
+// const firstEvenNUm = numbers.find((n) => n %2 === 0)
+// const secondNum = numbers.find((n) => n %2 !== 0);
+
+// console.log(firstEvenNUm);
+// console.log(secondNum);
+
+// class Person {
+//     constructor(firstName, lastName, address){
+//         this.firstName = firstName
+//         this.lastName = lastName
+//         this.address = address
+//     }
+
+//     first(){
+//         const firstN = this.firstName;
+//         return firstN
+//     }
+// }
+// const person1 = new Person('Henry', 'Oko', 'Beau Bassin');
+// const person2 = new Person('Sam', 'Jack', 'Quattre Bonnes');
+// console.log(person1.first());
+// console.log(person2);
+
+// class Person{
+//     constructor(firstName, lastName, age, country){
+//         this.firstName
+//         this.lastName
+//         this.age
+//         this.score =0
+//         this.country
+//     }
+//     get getScore(){
+//         return this.score
+//     }
+// }
+
+// const person1 = new Person('Henry', 'Oko', 25)
+
+// console.log(person1.getScore);
+
+
+var default_rate = 0.1;
+var rate = 0.5;
+
+function getAmount(){
+    if(!rate){
+        var rate = default_rate;
     }
-    average = total / grades[row].length;
-    console.log("Student " + parseInt(row+1) + "average: " + average.toFixed(2));
+    return rate;
 }
 
-
+console.log('Your rate is: ', getAmount())
