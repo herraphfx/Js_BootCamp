@@ -571,4 +571,4 @@ function getAmount(){
     return rate;
 }
 
-console.log('Your rate is: ', getAmount())
+console.log('Your rate i: ', getAmount())
