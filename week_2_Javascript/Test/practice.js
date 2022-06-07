@@ -561,14 +561,93 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log(person1.getScore);
 
 
-var default_rate = 0.1;
-var rate = 0.5;
+// var default_rate = 0.1;
+// var rate = 0.5;
 
-function getAmount(){
-    if(!rate){
-        var rate = default_rate;
+// function getAmount(){
+//     if(!rate){
+//         var rate = default_rate;
+//     }
+//     return rate;
+// }
+
+// console.log('Your rate i: ', getAmount())
+
+
+// function medianOfArray(array){
+//     var length = array.length;
+    
+//     //Odd
+//     if(length % 2 == 1){
+//         let Odd  = array[Math.floor(length/2)];
+//         console.log(Odd)
+//     }else{
+//         //Even
+//         let Even = (array[length/2]+array[length/2 -1 ]/2);
+//         console.log(Even);
+//     }
+// }
+
+// function medianOfTwoSortedArray(arr1, arr2, pos){
+//     if(pos <= 0){
+//         return -1;
+//     }
+//     if(pos == 1){
+//         return (arr1[0] + arr2[0])/2;
+//     }
+//     if(pos == 2){
+//         return (Math.max(arr1[0]) + Math.min(arr1[1],arr2[1])) / 2;
+//     }
+//     let median1 = medianOfArray(arr1), 
+//     median2 = medianOfArray(arr2);
+
+//     if(median1 == median2){
+//         return median1;
+//     }
+
+//     let evenOffset = pos % 2 == 0 ? 1: 0,
+//     offsetMinus = Math.floor(pos/2) - evenOffset
+// }
+
+// function commonElements(kArray){
+//     let hashmap = {}, last, answer = [];
+
+//     for(let i =0, kArrayLength = kArray.length; i < kArrayLength; i++){
+//         let currentArray = kArray[i];
+//         last = null;
+//         for(let j = 0, currentArrayLen = currentArray.length; j < currentArrayLen; j++){
+//             let currentElement = currentArray[j];
+//             if(last != currentElement){
+//                 if(! hashmap[currentElement]){
+//                     hashmap[currentElement] = 1;
+//                 }else{
+//                     hashmap[currentElement]++;
+//                 }
+//             }
+//             last = currentElement;
+//         }
+//     }
+
+//     for(let prop in hashmap){
+//         if(hashmap[prop] == kArray.length){
+//             answer.push(parseInt(prop));
+//         }
+//     }
+//     return answer;
+// }
+
+// commonElements([1,2,3], [1,2,3,4], [1,2]);
+
+function Matrix(rows, columns){
+    let jaggedarray = new Array(rows);
+    for(let i = 0; i < columns; i +=1){
+        jaggedarray[i] = new Array(rows);
     }
-    return rate;
+    return jaggedarray;
 }
 
-console.log('Your rate i: ', getAmount())
+console.log(Matrix(3,3));
+
+
+
+
