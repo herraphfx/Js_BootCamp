@@ -655,22 +655,60 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // javaScriptObject.title = 'Algorithms'
 // console.log(javaScriptObject);
 
-function ExampleClass(name, size){
-    let privateName = name;
-    let privateSize = size;
+// function ExampleClass(name, size){
+//     let privateName = name;
+//     let privateSize = size;
 
-    this.getName = function(){
-        return privateName;
+//     this.getName = function(){
+//         return privateName;
+//     }
+//     this.setName = function(name){
+//         privateName = name;
+//     }
+// }
+// let example1 = new ExampleClass("Public", 5);
+// console.log(example1);
+
+// function isValidDept(fireDept, policeDeptNum, saniDeptNum){
+//     return ((fireDept != policeDeptNum) && (fireDept != saniDeptNum) && (policeDeptNum != saniDeptNum) &&
+//     (fireDept + policeDeptNum + saniDeptNum == 12 ) && (policeDeptNum %2 == 0));
+// }
+
+// function permutation(){
+//     for(let fireDept = 1; fireDept <= 7; fireDept++){
+//         for(let policeDeptNum =1; policeDeptNum <= 7; policeDeptNum++){
+//             for(let saniDeptNum =1; saniDeptNum <= 7; saniDeptNum++){
+//                 if(isValidDept(fireDept, policeDeptNum, saniDeptNum))
+//                 console.log(fireDept + '-' + policeDeptNum + '-' + saniDeptNum);
+//             }
+//         }
+//     }
+  
+// }
+// permutation();
+
+function twoArray(sensorA, sensorB , result){
+    let diff = 0;
+    for(let i = 0; i < result; i++){
+        diff += Math.abs(sensorA[i] - sensorB[i]);
     }
-    this.setName = function(name){
-        privateName = name;
-    }
+    return diff;
 }
-let example1 = new ExampleClass("Public", 5);
-console.log(example1);
 
+function totalDiff(sensorA, sensorB, result){
+    if(result ==0) return 0;
+    let lastElementDiff = Math.abs(sensorA[result-1] - sensorB[result-1])
+    
+    let diff = twoArray(sensorA, sensorB, result) + lastElementDiff;
+    return diff;
+}
 
-
+function calc(){
+    let firstSensor = [15,-4, 56, 10, -23];
+    let seconSensor = [14,-9, 56, 14,-23];
+    console.log('Total difference ' + totalDiff(firstSensor, seconSensor, 5))
+}
+calc();
 
 
 
