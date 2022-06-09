@@ -638,15 +638,40 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // commonElements([1,2,3], [1,2,3,4], [1,2]);
 
-function Matrix(rows, columns){
-    let jaggedarray = new Array(rows);
-    for(let i = 0; i < columns; i +=1){
-        jaggedarray[i] = new Array(rows);
-    }
-    return jaggedarray;
-}
+// function Matrix(rows, columns){
+//     let jaggedarray = new Array(rows);
+//     for(let i = 0; i < columns; i +=1){
+//         jaggedarray[i] = new Array(rows);
+//     }
+//     return jaggedarray;
+// }
 
-console.log(Matrix(3,3));
+// console.log(Matrix(3,3));
+
+// let javaScriptObject = {};
+// let testArray = [1,2,3,4];
+
+// javaScriptObject.array = testArray;
+// javaScriptObject.title = 'Algorithms'
+// console.log(javaScriptObject);
+
+function ExampleClass(name, size){
+    let privateName = name;
+    let privateSize = size;
+
+    this.getName = function(){
+        return privateName;
+    }
+    this.setName = function(name){
+        privateName = name;
+    }
+}
+let example1 = new ExampleClass("Public", 5);
+console.log(example1);
+
+
+
+
 
 
 
