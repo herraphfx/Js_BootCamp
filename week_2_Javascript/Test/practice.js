@@ -706,7 +706,7 @@ function totalDiff(sensorA, sensorB, result){
 function calc(){
     let firstSensor = [15,-4, 56, 10, -23];
     let seconSensor = [14,-9, 56, 14,-23];
-    console.log('Total difference ' + totalDiff(firstSensor, seconSensor, 5))
+    console.log('Total difference amount ' + totalDiff(firstSensor, seconSensor, 5))
 }
 calc();
 
