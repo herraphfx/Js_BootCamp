@@ -687,28 +687,171 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // }
 // permutation();
 
-function twoArray(sensorA, sensorB , result){
-    let diff = 0;
-    for(let i = 0; i < result; i++){
-        diff += Math.abs(sensorA[i] - sensorB[i]);
-    }
-    return diff;
-}
+// function twoArray(sensorA, sensorB , result){
+//     let diff = 0;
+//     for(let i = 0; i < result; i++){
+//         diff += Math.abs(sensorA[i] - sensorB[i]);
+//     }
+//     return diff;
+// }
 
-function totalDiff(sensorA, sensorB, result){
-    if(result ==0) return 0;
-    let lastElementDiff = Math.abs(sensorA[result-1] - sensorB[result-1])
+// function totalDiff(sensorA, sensorB, result){
+//     if(result ==0) return 0;
+//     let lastElementDiff = Math.abs(sensorA[result-1] - sensorB[result-1])
     
-    let diff = twoArray(sensorA, sensorB, result) + lastElementDiff;
-    return diff;
+//     let diff = twoArray(sensorA, sensorB, result) + lastElementDiff;
+//     return diff;
+// }
+
+// function calc(){
+//     let firstSensor = [15,-4, 56, 10, -23];
+//     let seconSensor = [14,-9, 56, 14,-23];
+//     console.log('Total difference amount of goods' + totalDiff(firstSensor, seconSensor, 5))
+// }
+// calc();
+// for(j =1; j <= 7; j++){
+//     for (i = 1; i <=Math.abs( 4 - j) ; i++){
+       
+//             console.log(i)
+//         }
+
+//     console.log('\n');
+// }
+
+//Luhn Algorithm
+// let digit = prompt('Enter a number from 0-9');
+
+// let doubleDigit = digit * 2;
+// let sum = 0;
+
+// if(doubleDigit >= 10){
+//     sum = 1 + doubleDigit % 10;
+// }
+// else{
+//     sum = doubleDigit;
+// }
+
+// console.log('Sum of double digit is ' + sum + '\n')
+
+//turning into a fuction of a 2 digits
+
+// let sum = 0;
+
+// function doubleDigitValue(digit){
+//     doubleDigit = digit * 2;
+//     if(doubleDigit >= 10 ){
+//         sum = 1 + doubleDigit % 10;
+//     }
+//     else{
+//         sum = doubleDigit;
+//     }
+//     return sum
+// }
+
+// findN = prompt('Enter a number betweeen 0 - 9')
+// let result = doubleDigit(findN);
+
+// console.log(result);
+
+//Now we deal with one digit
+
+// let onedigit = prompt('Enter a one digit number')
+
+// let sumDigit = onedigit - '0';
+
+// console.log(sumDigit);
+
+//We check sum and validation of length.
+
+
+// let checksum = 0;
+
+// let digit = prompt('Enter a six digit number');
+
+// for(let position =1 ; position <= 6; position++){
+//     console.log(digit);
+//     checksum += digit - '0';
+// }
+// if(checksum % 10 == 0){
+//     console.log('Checksum is valid');
+// }
+// else{
+//     console.log('Checksum is invalid')
+// }
+
+// console.log('Checksum is ' + checksum + '\n');
+
+//we check the positon of the six digits. if its even we leave it but
+//if its odd we send it to the doubledigits function
+
+// let checksum = 0;
+
+// let digit = prompt('Enter a six digit number');
+
+// for(let position = 1 ; position <= 6; position++){
+   
+//    if(position % 2 == 0){
+//     checksum += digit - '0'
+//    }
+//    else{
+//     checksum += doubleDigit(digit);
+//    }
+// }
+// if(checksum % 10 == 0){
+//     console.log('Checksum is valid');
+// }
+// else{
+//     console.log('Checksum is invalid');
+// }
+// console.log('Checksum is ' + checksum + '\n');
+
+
+let digit = prompt('Enter a number ');
+
+let oddLengthCheckSum = 0;
+let evenLengthCheckSum = 0;
+
+let position =1;
+
+while(digit != 10){
+    if(position % 2 == 0){
+        oddLengthCheckSum += doubleDigitValue(digit);
+        evenLengthCheckSum += digit - '0';
+    }
+    else{
+        oddLengthCheckSum += digit - '0';
+        evenLengthCheckSum += doubleDigitValue(digit);
+    }
+    position++
+}
+let checksum =0;
+if((position - 1) % 2){
+    checksum = evenLengthCheckSum;
+}
+else{
+    checksum = oddLengthCheckSum;
+}
+if(checksum % 10 == 0){
+    console.log('Checksum is divisible by 10. Valid')
+}
+else{
+    console.log('Checksum is not divisible by 10. Invalid')
 }
 
-function calc(){
-    let firstSensor = [15,-4, 56, 10, -23];
-    let seconSensor = [14,-9, 56, 14,-23];
-    console.log('Total difference amount of goods' + totalDiff(firstSensor, seconSensor, 5))
+function doubleDigitValue(digit){
+    doubleDigit = digit * 2;
+    if(doubleDigit >= 10 ){
+        sum = 1 + doubleDigit % 10;
+    }
+    else{
+        sum = doubleDigit;
+    }
+    return sum
 }
-calc();
+
+
+
+
 
 
 
