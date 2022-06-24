@@ -806,51 +806,132 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // console.log('Checksum is ' + checksum + '\n');
 
 
-let digit = prompt('Enter a number ');
+// let digit = prompt('Enter a number ');
 
-let oddLengthCheckSum = 0;
-let evenLengthCheckSum = 0;
+// let oddLengthCheckSum = 0;
+// let evenLengthCheckSum = 0;
 
-let position =1;
+// let position =1;
 
-while(digit != 10){
-    if(position % 2 == 0){
-        oddLengthCheckSum += doubleDigitValue(digit);
-        evenLengthCheckSum += digit - '0';
+// while(digit != 10){
+//     if(position % 2 == 0){
+//         oddLengthCheckSum += doubleDigitValue(digit);
+//         evenLengthCheckSum += digit - '0';
+//     }
+//     else{
+//         oddLengthCheckSum += digit - '0';
+//         evenLengthCheckSum += doubleDigitValue(digit);
+//     }
+//     position++
+// }
+// let checksum =0;
+// if((position - 1) % 2){
+//     checksum = evenLengthCheckSum;
+// }
+// else{
+//     checksum = oddLengthCheckSum;
+// }
+// if(checksum % 10 == 0){
+//     console.log('Checksum is divisible by 10. Valid')
+// }
+// else{
+//     console.log('Checksum is not divisible by 10. Invalid')
+// }
+
+// function doubleDigitValue(digit){
+//     doubleDigit = digit * 2;
+//     if(doubleDigit >= 10 ){
+//         sum = 1 + doubleDigit % 10;
+//     }
+//     else{
+//         sum = doubleDigit;
+//     }
+//     return sum
+// }
+
+// function isPrime(n){
+//     if(n <= 1) 
+//     return false;
+//     if(n <= 3)
+//     return true;
+
+//     if(n%2 == 0 || n%3 == 0)
+//     return false;
+
+//     for(let i=5; i*i <= n; i=i+6){
+//         if(n%i == 0 || n%(i+2) == 0)
+//         return false;
+//     }
+//     return true;
+// }
+
+// function findSum(arr, weight){
+//     for(let i=0; i < arr.length; i++){
+//         for(let j =i +1; j < arr.length; j++){
+            
+//             if(arr[i] + arr[j] == weight){
+//                 console.log(arr[i], arr[j]);
+//             }
+//         }
+//     }
+//     return -1
+// }
+
+// arr = [1,2,3,4,5]
+// findSum(arr, 9)
+
+// function findSumBetter(arr, weight){
+//     let hashtable = {};
+
+//     for(let i = 0; i < arr.length; i++){
+//         let currentElement = arr[i];
+//         difference = weight - currentElement;
+
+//         if(hashtable[currentElement] != undefined){
+//            return [i, hashtable[difference]]
+//         }
+//         else{
+//             hashtable[currentElement] = i
+//             console.log(i)
+//         }
+//         // console.log(difference);
+//     }
+//     return -1;
+// }
+
+// arr = [1,2,3,4,5]
+
+// findSumBetter(arr, 9)
+
+// function arraySlice(array, beginIndex, endIndex){
+//     if(!beginIndex && !endIndex){
+//         console.log(array);
+//     }
+
+   
+//     let partArray = [];
+
+//     for(let i = beginIndex; i< endIndex; i++){
+//        partArray.push(array[i]);
+       
+//     }
+//     console.log(partArray)
+// }
+
+// array = [1,2,3,4,5]
+// arraySlice(array, 1,3);
+
+
+function medianOfArray(array){
+    //Odd
+    if(array.length % 2 == 1){
+        console.log(array[Math.floor(array.length/2)]);
+    }else{
+        console.log((array[array.length/2] + array[array.length/2 - 1]) / 2)
     }
-    else{
-        oddLengthCheckSum += digit - '0';
-        evenLengthCheckSum += doubleDigitValue(digit);
-    }
-    position++
 }
-let checksum =0;
-if((position - 1) % 2){
-    checksum = evenLengthCheckSum;
-}
-else{
-    checksum = oddLengthCheckSum;
-}
-if(checksum % 10 == 0){
-    console.log('Checksum is divisible by 10. Valid')
-}
-else{
-    console.log('Checksum is not divisible by 10. Invalid')
-}
-
-function doubleDigitValue(digit){
-    doubleDigit = digit * 2;
-    if(doubleDigit >= 10 ){
-        sum = 1 + doubleDigit % 10;
-    }
-    else{
-        sum = doubleDigit;
-    }
-    return sum
-}
-
-
-
+array = [1,2,3,4,5,6]
+medianOfArray(array)
 
 
 
