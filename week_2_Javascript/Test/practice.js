@@ -204,9 +204,9 @@
 // let num1 = [1,2,3,4,5,6,7,8]
 // num1.forEach(square);
 
-function isEven(num){
-    return num % 2 === 0;
-}
+// function isEven(num){
+//     return num % 2 === 0;
+// }
 
 // let nums = [2,4,6,8,10];
 
@@ -498,7 +498,7 @@ const countries = ['Finland', 'Estonia', 'Sweden', 'Norway'];
 
 // console.log(countrieswithLand);
 
-const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const even = numbers.filter((n) => n % 2 ==0)
 // const odd = numbers.filter((n) => n % 2 !== 0)
@@ -922,53 +922,150 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // arraySlice(array, 1,3);
 
 
-function medianOfArray(array){
-    //Odd
-    if(array.length % 2 == 1){
-        console.log(array[Math.floor(array.length/2)]);
-    }else{
-        console.log((array[array.length/2] + array[array.length/2 - 1]) / 2)
-    }
-}
+// function medianOfArray(array){
+//     //Odd
+//     if(array.length % 2 == 1){
+//         console.log(array[Math.floor(array.length/2)]);
+//     }else{
+//         console.log((array[array.length/2] + array[array.length/2 - 1]) / 2)
+//     }
+// }
 // array = [1,2,3,4,5,6]
 // medianOfArray(array)
 
-function medianOfTwoSortedArray(arr1, arr2, pos){
-    if(pos <= 0){
-        return -1
+// function medianOfTwoSortedArray(arr1, arr2, pos){
+//     if(pos <= 0){
+//         return -1
+//     }
+
+//     if(pos ==1){
+//         return (arr1[0] + arr2[0])/2
+//     }
+
+//     if(pos == 2){
+//         return (Math.max(arr1[0]. arr2[0]) + Math.min(arr1[1] + arr2[1])) / 2
+//     }
+
+//     let median1 = medianOfArray(arr1);
+//     let median2 = medianOfArray(arr2);
+
+//     if(median1 == median2){
+//         return median1;
+//     }
+
+//     let evenOffset = pos % 2 == 0 ? 1 : 0;
+//     let offsetMinus = Math.floor(pos/2) - evenOffset
+//     let offsetPlus = Math.floor(pos/2) + evenOffset
+
+//     if(median1 < median2){
+//         return medianOfTwoSortedArray(arr1.slice(offsetMinus),
+//         arr2.slice(offsetMinus), offsetPlus)
+//     }
+//     else{
+//         return medianOfTwoSortedArray(arr2.slice(offsetMinus),
+//         arr1.slice(offsetMinus), offsetPlus)
+//     }
+// }
+
+// medianOfTwoSortedArray([1 , 2 , 3 ], [4 , 5 , 6 ], 3 ); 
+
+// function commonElements(kArray){
+//     let hashmap = {},
+//     last, answer =[];
+
+//     for(let i = 0; i < kArray.length; i++){
+//         let currentArray = kArray[i];
+//         last = null;
+
+//         for(let j = 0; j < currentArray.length; j++){
+//             let currentElement = currentArray[j];
+
+//             if(last != currentElement){
+//                 if(!hashmap[currentElement]){
+//                     hashmap[currentElement] =1 
+//                 }
+//                 else{
+//                     hashmap[currentElement] ++
+//                 }
+//             }
+//         }
+//     }
+
+//     for(let prop in hashmap){
+//         if(hashmap[prop] == kArray.length){
+//             answer.push(parseInt (prop))
+//         }
+//     }
+//     return answer;
+// }
+
+// commonElements([[1 ,2 ,3 ],[1 ,2 ,3 ,4 ],[1 ,2 ]]);
+
+// let Arraynumbers = [1,2,3,4,5,6,7];
+
+// Arraynumbers.map((value) => {
+//     console.log(value * 10);
+// })
+
+// let sum = Arraynumbers.reduce((preval, currentval, index, array) =>{
+//     return preval + currentval;
+// },1);
+
+// console.log(sum);
+
+
+// function Matrix(row, columns){
+
+//     let jaggedarray = new Array(row);
+
+    
+//     for(let i =0; i< columns; i++){
+//         jaggedarray[i] = new Array(row)
+//     }
+//     return jaggedarray
+// }
+
+// console.log(Matrix([[1,2,3],[4,5,6],[7,8,9]]))
+
+let M = [
+    [1,2,3,4,5],
+    [6,7,8,9,10],
+    [11,12,13,14,15],
+    [16,17,18,19,20]
+];
+
+
+function spiralSprint(M){
+    let topRow = 0,
+    leftCol = 0,
+    btmRow = M.length - 1,
+    rightCol = M[0].length - 1
+
+
+while(topRow < btmRow && leftCol < rightCol){
+    for(let col = 0; col <= rightCol; col++){
+        console.log(M[topRow][col]);
     }
+    top++;
 
-    if(pos ==1){
-        return (arr1[0] + arr2[0])/2
+    for(let row = topRow; row<= btmRow; row++){
+        console.log(M[row][rightCol]);
     }
-
-    if(pos == 2){
-        return (Math.max(arr1[0]. arr2[0]) + Math.min(arr1[1] + arr2[1])) / 2
+    rightCol--;
+    if(topRow >= btmRow){
+        for(let col = rightCol; col > 0; col--){
+            console.log(M[btmRow][col]);
+        }
+        btmRow--;
     }
-
-    let median1 = medianOfArray(arr1);
-    let median2 = medianOfArray(arr2);
-
-    if(median1 == median2){
-        return median1;
-    }
-
-    let evenOffset = pos % 2 == 0 ? 1 : 0;
-    let offsetMinus = Math.floor(pos/2) - evenOffset
-    let offsetPlus = Math.floor(pos/2) + evenOffset
-
-    if(median1 < median2){
-        return medianOfTwoSortedArray(arr1.slice(offsetMinus),
-        arr2.slice(offsetMinus), offsetPlus)
-    }
-    else{
-        return medianOfTwoSortedArray(arr2.slice(offsetMinus),
-        arr1.slice(offsetMinus), offsetPlus)
+    if(leftCol <= rightCol){
+        for(let row = btmRow; row > topRow; row--){
+            console.log(M[row][leftCol]);
+        }
+        leftCol++;
     }
 }
 
-medianOfTwoSortedArray([1 , 2 , 3 ], [4 , 5 , 6 ], 3 ); 
 
-
-
-
+}
+spiralSprint(M)
